@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoftSell - Sell Your Licenses</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .icon {
+        font-size: 2rem;
+      }
+      .card-icon {
+        font-size: 2.5rem;
+        color: #007bff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container py-5">
+      <!-- Hero Section -->
+      <section class="text-center mb-5">
+        <h1 class="display-5 fw-bold">
+          Sell Your Unused Software Licenses with Ease
+        </h1>
+        <p class="lead">
+          SoftSell helps you turn unused software into cash quickly and safely.
+        </p>
+        <a href="#contact" class="btn btn-primary btn-lg">Sell My Licenses</a>
+      </section>
+
+      <!-- How It Works -->
+
+      <section class="mb-5" id="how-it-works">
+        <h2 class="text-center mb-4">How It Works</h2>
+        <div class="col-md-4 mb-3">
+  <a href="upload.html" class="text-decoration-none" target="_blank">
+    <div class="card p-4 h-100">
+      <div class="card-icon mb-2">📤</div>
+      <h5>Upload License</h5>
+      <p>Click to open license upload form in a new tab.</p>
+    </div>
+  </a>
+          </div>
+         <div class="col-md-4 mb-3">
+  <a href="valuation.html" class="text-decoration-none" target="_blank">
+    <div class="card p-4 h-100">
+      <div class="card-icon mb-2">💰</div>
+      <h5>Get Valuation</h5>
+      <p>Click to open valuation tool in a new tab.</p>
+    </div>
+  </a>
+</div>
+
+          <div class="col-md-4 mb-3">
+  <a href="payment.html" class="text-decoration-none" target="_blank">
+    <div class="card p-4 h-100">
+      <div class="card-icon mb-2">😊</div>
+      <h5>Get Paid</h5>
+      <p>Click to submit payment details and receive funds.</p>
+    </div>
+  </a>
+</div>
+
+        </div>
+
+       
+
+      <!-- Why Choose Us -->
+      <section class="mb-5">
+        <h2 class="text-center mb-4">Why Choose SoftSell?</h2>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <div class="d-flex align-items-start">
+              <span class="icon me-3">🔒</span>
+              <div>
+                <h6>Secure Transactions</h6>
+                <p>We ensure safe and encrypted payments every time.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div class="d-flex align-items-start">
+              <span class="icon me-3">⚡</span>
+              <div>
+                <h6>Fast Processing</h6>
+                <p>Your request is handled within 24 hours.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div class="d-flex align-items-start">
+              <span class="icon me-3">✅</span>
+              <div>
+                <h6>Trusted by Thousands</h6>
+                <p>Thousands of clients rely on SoftSell for license sales.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="mb-5">
+        <h2 class="text-center mb-4">What Our Customers Say</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card p-4">
+              <p class="fst-italic">
+                “SoftSell made it incredibly easy to offload unused licenses.
+                The payment was quick and the process seamless.”
+              </p>
+              <p class="fw-bold mb-0">— Arun Kumar</p>
+              <small>IT Manager, TechCorp</small>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card p-4">
+              <p class="fst-italic">
+                “Highly professional and secure. I was skeptical at first, but
+                SoftSell delivered beyond expectations.”
+              </p>
+              <p class="fw-bold mb-0">— Pushkar Kumar</p>
+              <small>Procurement Lead, DevSolutions</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form -->
+      <section id="contact" class="mb-5">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <form class="row g-3" onsubmit="return validateForm()">
+          <div class="col-md-6">
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Name"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Email"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <input
+              type="text"
+              class="form-control"
+              id="company"
+              placeholder="Company"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <select class="form-select" id="license" required>
+              <option value="">Select License Type</option>
+              <option value="antivirus">Antivirus</option>
+              <option value="design">Design Software</option>
+              <option value="productivity">Productivity Suite</option>
+              <option value="devtools">Development Tools</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <textarea
+              class="form-control"
+              id="message"
+              rows="4"
+              placeholder="Message"
+              required
+            ></textarea>
+          </div>
+          <div class="col-12 text-center">
+            <button type="submit" class="btn btn-success">Send Message</button>
+          </div>
+        </form>
+      </section>
+    </div>
+
+    <script>
+      function validateForm() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const company = document.getElementById("company").value;
+        const license = document.getElementById("license").value;
+        const message = document.getElementById("message").value;
+
+        if (!name || !email || !company || !license || !message) {
+          alert("Please fill out all fields.");
+          return false;
+        }
+        alert("Message sent successfully!");
+        return false;
+      }
+    </script>
+  </body>
+</html>
