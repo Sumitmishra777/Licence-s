@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Paid</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container py-5">
+      <h2 class="text-center mb-4">Get Paid</h2>
+      <form onsubmit="return processPayment()">
+        <div class="mb-3">
+          <label for="fullName" class="form-label">Full Name</label>
+          <input type="text" id="fullName" class="form-control" required />
+        </div>
+        <div class="mb-3">
+          <label for="bankAccount" class="form-label"
+            >Bank Account / UPI ID</label
+          >
+          <input type="text" id="bankAccount" class="form-control" required />
+        </div>
+        <div class="mb-3">
+          <label for="amount" class="form-label">Expected Amount</label>
+          <input
+            type="text"
+            id="amount"
+            class="form-control"
+            placeholder="$..."
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-success w-100">
+          Submit for Payment
+        </button>
+      </form>
+
+      <div
+        id="paymentStatus"
+        class="alert alert-success mt-4 d-none text-center"
+      ></div>
+    </div>
+
+    <script>
+      function processPayment() {
+        const name = document.getElementById("fullName").value;
+        const account = document.getElementById("bankAccount").value;
+        const amount = document.getElementById("amount").value;
+        const statusBox = document.getElementById("paymentStatus");
+
+        if (!name || !account || !amount) {
+          alert("Please fill in all fields.");
+          return false;
+        }
+
+        statusBox.classList.remove("d-none");
+        statusBox.textContent = `Success! ${amount} will be transferred to ${account} within 1–2 business days.`;
+
+        return false;
+      }
+    </script>
+  </body>
+</html>
